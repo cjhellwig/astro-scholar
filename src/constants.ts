@@ -19,17 +19,17 @@ export const SITE_DATA = {
     // Bluesky handle (without the @)
     bluesky: "",
     linkedin: "",
-    github: "whydevils",
+    github: "",
 
     // Google Scholar ID (found in your Scholar profile URL)
     // Example: https://scholar.google.com/citations?user=YOUR_ID_HERE
     scholar: "",
 
     // Your email address (use [at] and [dot] to avoid spam bots)
-    email: "[your-email-address]",
+    email: "cj[at]nyctuto[dot]net",
 
     // One-line research tagline used for SEO and social sharing meta tags
-    description: "Your one-line research tagline for SEO and social sharing.",
+    description: "Personalized tutoring designed for your success.",
 
     // Base URL of your deployed site (no trailing slash), e.g. "https://your-username.github.io"
     // Used for Open Graph tags. Leave empty if you haven't deployed yet.
