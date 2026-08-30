@@ -13,7 +13,7 @@ export const SITE_DATA = {
 
     // Social media handles (username only, not full URL)
     // Set to empty string "" to hide an icon
-    twitter: "[your-twitter-handle]",  // bird logo → twitter.com
+    twitter: "",  // bird logo → twitter.com
     x: "",             // X logo → x.com
 
     // Bluesky handle (without the @)
