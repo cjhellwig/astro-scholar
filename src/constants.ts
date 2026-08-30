@@ -6,10 +6,10 @@
 
 export const SITE_DATA = {
     // Your full name as you'd like it displayed
-    name: 'Dr. Beatrix Bumble',
+    name: 'C.J. Hellwig',
 
     // A brief tagline describing your role or expertise (3-5 words/phrases)
-    tagline: "Avian-Feline Fluff Dynamics | Lead Investigator",
+    tagline: "NYC Tutor",
 
     // Social media handles (username only, not full URL)
     // Set to empty string "" to hide an icon
