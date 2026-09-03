@@ -9,7 +9,7 @@ export const SITE_DATA = {
     name: 'C.J. Hellwig',
 
     // A brief tagline describing your role or expertise (3-5 words/phrases)
-    tagline: "NYC Tutor<br>Math & Science<br>20+ Years of Experience",
+    tagline: "Math & Science Tutor | 20+ Years of Experience",
 
     // Social media handles (username only, not full URL)
     // Set to empty string "" to hide an icon
