@@ -4,6 +4,8 @@ import Layout from '../layouts/Layout.astro';
 import { SITE_DATA } from '../constants';
 import portraitImage from '../assets/portrait.png';
 
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
 import '../styles/about.css';
 ---
 
@@ -13,8 +15,9 @@ import '../styles/about.css';
         <h2>Coming soon!</h2>
             <section>
                 <p>
-                    I'm currently in the process of making a handful of educational videos, so prospective students can get an idea of my teaching style. Expect the first video no later than <strong>September 15th, 2026.</strong>
+                    I made this video so prospective students can get an idea of my teaching style.
                 </p>
+                <YouTube id="https://youtu.be/CSE6gm5-8Zw" />
             </section>
         </div>
     </div>
