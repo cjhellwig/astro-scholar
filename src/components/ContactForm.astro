@@ -40,7 +40,7 @@ const { source = "General Contact Page" } = Astro.props;
   <!-- Honeypot Spam Protection -->
   <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-  <button type="submit">Send Message</button>
+  <button type="submit">Submit Form</button>
 </form>
 
 <style>
@@ -79,16 +79,22 @@ const { source = "General Contact Page" } = Astro.props;
     border-color: var(--color-accent);
   }
 
-  button {
+button {
     padding: 0.75rem;
-    background-color: var(--color-primary);
-    color: var(--color-bg);
+    background-color: #334155; /* A balanced, professional slate grey for day mode */
+    color: #ffffff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
     font-size: 1rem;
     transition: background-color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  /* Softer, balanced grey for dark mode so it isn't blinding white */
+  [data-theme="dark"] button {
+    background-color: #475569; 
+    color: #f8fafc;
   }
 
   @media (hover: hover) {
