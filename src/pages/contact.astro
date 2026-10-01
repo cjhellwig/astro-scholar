@@ -28,9 +28,19 @@ import '../styles/about.css';
                 </p>
             </div>
         </div>
-        <div class="contact-form-section" style="display: block; width: 100%; clear: both; margin-top: 2rem;">
+        <div class="contact-form-section">
             <ContactForm/>
         </div>
 
     </div>
 </Layout>
+
+<style>
+  /* Forces the contact page intro to stay stacked vertically on all screen sizes */
+  @media (min-width: 768px) {
+    .page-container .about-intro-wrapper {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+  }
+</style>
