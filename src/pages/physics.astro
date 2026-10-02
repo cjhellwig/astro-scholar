@@ -1,0 +1,67 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import LandingHero from '../components/LandingHero.astro';
+import { SITE_DATA } from '../constants';
+---
+
+<LandingLayout title="Expert Physics Tutor in NYC">
+	
+	<LandingHero 
+		name={SITE_DATA.name}
+		headline="Master Physics with a 20+ Year Expert."
+		subheadline="Individualized 1-on-1 instruction for AP Physics, mechanics, electromagnetism, and college coursework in Manhattan & Online."
+	/>
+
+	<section class="landing-body-content">
+		<h2>Why Work With Me?</h2>
+		<p>
+			Unlike generic tutoring agencies that pass you off to changing graduate students, you work directly with me—an experienced educator with over two decades of experience breaking down complex math and science concepts for NYC students.
+		</p>
+
+		<h2>Physics Courses Covered</h2>
+		<ul>
+			<li><strong>AP Physics 1, 2, & C:</strong> Rigorous preparation for exams, mechanics, and electricity & magnetism.</li>
+			<li><strong>College Physics:</strong> Algebra-based and calculus-based university physics support.</li>
+			<li><strong>Targeted Problem Sets:</strong> Customized practice designed around your exact syllabus.</li>
+		</ul>
+
+		<div id="contact" class="landing-contact-box">
+			<h3>Ready to Improve Your Physics Grade?</h3>
+			<p>Reach out today to discuss your schedule, course requirements, and current problem sets.</p>
+			<a href={`mailto:${SITE_DATA.email}`} class="landing-btn-primary">Send an Inquiry</a>
+		</div>
+	</section>
+
+</LandingLayout>
+
+<style>
+  .landing-body-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem 1.5rem;
+    line-height: 1.6;
+  }
+  .landing-body-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .landing-body-content ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+  .landing-body-content li {
+    margin-bottom: 0.75rem;
+  }
+  .landing-contact-box {
+    margin-top: 3rem;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .landing-contact-box h3 {
+    margin-top: 0;
+  }
+</style>
