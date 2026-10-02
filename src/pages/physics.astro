@@ -1,66 +1,18 @@
 ---
-import LandingLayout from '../layouts/LandingLayout.astro';
-import LandingHero from '../components/LandingHero.astro';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 import { SITE_DATA } from '../constants';
-import '../styles/about.css';
+
+import '../styles/home.css';
 ---
 
-<LandingLayout title="Expert Physics Tutor in NYC">
-	
-	<LandingHero 
-		name={SITE_DATA.name}
-		headline="Master Physics with a 20+ Year Expert."
-		subheadline="Individualized 1-on-1 instruction for AP Physics, mechanics, electromagnetism, and college coursework in Manhattan & Online."
+<Layout pageTitle="">
+	<Hero 
+		name={SITE_DATA.name} 
+		tagline={SITE_DATA.tagline} 
+		twitter={SITE_DATA.twitter}
+		linkedin={SITE_DATA.linkedin}
+		scholar={SITE_DATA.scholar}
+		email={SITE_DATA.email}
 	/>
-
-	<main class="page-container">
-		<div class="about-content" style="max-width: 800px; margin: 0 auto;">
-			
-			<section class="about-section">
-				<h2>Why Work With Me?</h2>
-				<p class="intro-text">
-					Unlike generic tutoring agencies that rotate graduate students through your schedule, you work directly with me—an experienced educator with over two decades of experience breaking down complex math and science concepts for NYC students. My approach is deeply patient, highly encouraging, and entirely tailored to how you learn.
-				</p>
-			</section>
-
-			<section class="about-section">
-				<h2>Physics Courses Covered</h2>
-				<ul class="icon-list education-list">
-					<li>
-						<div class="list-entry">
-							<h3>AP Physics (1, 2, &amp; C: Mechanics / E&amp;M)</h3>
-							<p class="institution">Rigorous preparation for exams &amp; conceptual foundations</p>
-							<p>Advanced problem-solving techniques tailored to your school curriculum and exam standards.</p>
-						</div>
-					</li>
-					<li>
-						<div class="list-entry">
-							<h3>College &amp; University Physics</h3>
-							<p class="institution">Algebra &amp; Calculus-Based Tracks</p>
-							<p>Dedicated university physics support for pre-med, architecture, and engineering majors.</p>
-						</div>
-					</li>
-					<li>
-						<div class="list-entry">
-							<h3>Targeted Problem Sets</h3>
-							<p class="institution">Customized Practice Materials</p>
-							<p>Personalized problem sets and reference sheets designed around your exact syllabus to ensure lasting mastery.</p>
-						</div>
-					</li>
-				</ul>
-			</section>
-
-			<!-- Contact Section using standard site classes -->
-			<section id="contact" class="contact-section">
-				<h2>Ready to Improve Your Physics Grade?</h2>
-				<p>
-					If you have any questions or if you'd like to schedule an appointment, you can email me at 
-					<a href={`mailto:${SITE_DATA.email}`}>{SITE_DATA.email}</a>, or text/call at 718-753-7060.
-				</p>
-				<a href={`mailto:${SITE_DATA.email}`} class="landing-btn-primary">Send an Inquiry</a>
-			</section>
-
-		</div>
-	</main>
-
-</LandingLayout>
+</Layout>
