@@ -1,0 +1,67 @@
+---
+import { SITE_DATA } from '../constants';
+import '../styles/home.css';
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title} | {SITE_DATA.name}</title>
+	</head>
+	<body>
+		<header class="landing-site-header">
+			<a href="/" class="landing-brand">{SITE_DATA.name}</a>
+			<a href="tel:YOUR-PHONE-NUMBER" class="landing-header-phone">Call / Text</a>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="landing-site-footer">
+			<p>&copy; 2026 {SITE_DATA.name}. Manhattan, NYC & Online via Zoom.</p>
+		</footer>
+
+		<style>
+			/* Minimalist header & footer styles matching your site's rhythm */
+			body {
+				margin: 0;
+				font-family: inherit;
+				color: var(--color-text);
+				background: var(--color-bg, #fff);
+			}
+			.landing-site-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 2rem 1.5rem;
+			}
+			.landing-brand {
+				font-weight: bold;
+				font-size: 1.2rem;
+				text-decoration: none;
+				color: inherit;
+			}
+			.landing-header-phone {
+				font-weight: 600;
+				text-decoration: none;
+				color: var(--color-accent, #2563eb);
+			}
+			.landing-site-footer {
+				text-align: center;
+				padding: 3rem 1.5rem;
+				font-size: 0.9rem;
+				opacity: 0.7;
+			}
+		</style>
+	</body>
+</html>
