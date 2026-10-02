@@ -2,6 +2,7 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 import LandingHero from '../components/LandingHero.astro';
 import { SITE_DATA } from '../constants';
+import '../styles/about.css'; // Reusing your about/content text styles for clean typography
 ---
 
 <LandingLayout title="Expert Physics Tutor in NYC">
@@ -12,56 +13,45 @@ import { SITE_DATA } from '../constants';
 		subheadline="Individualized 1-on-1 instruction for AP Physics, mechanics, electromagnetism, and college coursework in Manhattan & Online."
 	/>
 
-	<section class="landing-body-content">
-		<h2>Why Work With Me?</h2>
-		<p>
-			Unlike generic tutoring agencies that pass you off to changing graduate students, you work directly with me—an experienced educator with over two decades of experience breaking down complex math and science concepts for NYC students.
-		</p>
+	<div class="page-container">
+		<div class="about-content" style="max-width: 800px; margin: 0 auto;">
+			
+			<section>
+				<h2>Why Work With Me?</h2>
+				<p class="intro-text">
+					Unlike generic tutoring agencies that rotate graduate students through your schedule, you work directly with me—an experienced educator with over two decades of experience breaking down complex math and science concepts for NYC students. My approach is deeply patient, highly encouraging, and entirely tailored to how you learn.
+				</p>
+			</section>
 
-		<h2>Physics Courses Covered</h2>
-		<ul>
-			<li><strong>AP Physics 1, 2, & C:</strong> Rigorous preparation for exams, mechanics, and electricity & magnetism.</li>
-			<li><strong>College Physics:</strong> Algebra-based and calculus-based university physics support.</li>
-			<li><strong>Targeted Problem Sets:</strong> Customized practice designed around your exact syllabus.</li>
-		</ul>
+			<section>
+				<h2>Physics Courses Covered</h2>
+				<ul class="education-list icon-list">
+					<li>
+						<span class="list-item-title">AP Physics (1, 2, & C: Mechanics / E&M)</span>
+						<span class="list-item-description">Rigorous preparation for exams, conceptual foundations, and advanced problem-solving techniques.</span>
+					</li>
+					<li>
+						<span class="list-item-title">College & University Physics</span>
+						<span class="list-item-description">Algebra-based and calculus-based university physics support for pre-med and engineering tracks.</span>
+					</li>
+					<li>
+						<span class="list-item-title">Targeted Problem Sets</span>
+						<span class="list-item-description">Customized practice and reference sheets designed around your exact syllabus to ensure lasting mastery.</span>
+					</li>
+				</ul>
+			</section>
 
-		<div id="contact" class="landing-contact-box">
-			<h3>Ready to Improve Your Physics Grade?</h3>
-			<p>Reach out today to discuss your schedule, course requirements, and current problem sets.</p>
-			<a href={`mailto:${SITE_DATA.email}`} class="landing-btn-primary">Send an Inquiry</a>
+			<!-- Contact Section matching your site style -->
+			<section id="contact" style="margin-top: 3rem; text-align: center; background: rgba(0,0,0,0.02); padding: 2.5rem; border-radius: 8px;">
+				<h2>Ready to Improve Your Physics Grade?</h2>
+				<p style="margin: 1rem 0 1.5rem 0;">
+					If you have any questions or if you'd like to schedule an appointment, you can email me at 
+					<a href={`mailto:${SITE_DATA.email}`}>{SITE_DATA.email}</a>, or text/call at 718-753-7060.
+				</p>
+				<a href={`mailto:${SITE_DATA.email}`} class="landing-btn-primary" style="display: inline-block;">Send an Inquiry</a>
+			</section>
+
 		</div>
-	</section>
+	</div>
 
 </LandingLayout>
-
-<style>
-  .landing-body-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1.5rem 4rem 1.5rem;
-    line-height: 1.6;
-  }
-  .landing-body-content h2 {
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  .landing-body-content ul {
-    margin-bottom: 2rem;
-    padding-left: 1.5rem;
-  }
-  .landing-body-content li {
-    margin-bottom: 0.75rem;
-  }
-  .landing-contact-box {
-    margin-top: 3rem;
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 2.5rem;
-    border-radius: 8px;
-    text-align: center;
-  }
-  .landing-contact-box h3 {
-    margin-top: 0;
-  }
-</style>
