@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import portraitImage from '../assets/portrait.png';
+
+export interface Props {
+  name: string;
+  headline: string;
+  subheadline: string;
+}
+
+const { name, headline, subheadline } = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="portrait-container">
+      <Image src={portraitImage} alt={name} class="portrait" />
+    </div>
+    <div class="hero-text">
+      <span class="landing-kicker">NYC Private Tutoring &bull; 20+ Years Experience</span>
+      <h1>{headline}</h1>
+      <p class="tagline">{subheadline}</p>
+      
+      <div class="landing-cta-group">
+        <a href="#contact" class="landing-btn-primary">Book a Consultation</a>
+        <a href="tel:YOUR-PHONE-NUMBER" class="landing-btn-secondary">Call / Text</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Extra styling specifically for landing page hero elements */
+  .landing-kicker {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent, #2563eb);
+    margin-bottom: 0.5rem;
+  }
+
+  .landing-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .landing-btn-primary {
+    background-color: var(--color-accent, #2563eb);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+
+  .landing-btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .landing-btn-secondary {
+    border: 2px solid var(--color-text, #333);
+    color: var(--color-text, #333);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+
+  .landing-btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  @media (max-width: 960px) {
+    .landing-cta-group {
+      justify-content: center;
+    }
+  }
+</style>
