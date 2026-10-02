@@ -2,7 +2,7 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 import LandingHero from '../components/LandingHero.astro';
 import { SITE_DATA } from '../constants';
-import '../styles/about.css'; // Reusing your about/content text styles for clean typography
+import '../styles/about.css';
 ---
 
 <LandingLayout title="Expert Physics Tutor in NYC">
@@ -13,25 +13,25 @@ import '../styles/about.css'; // Reusing your about/content text styles for clea
 		subheadline="Individualized 1-on-1 instruction for AP Physics, mechanics, electromagnetism, and college coursework in Manhattan & Online."
 	/>
 
-	<div class="page-container">
-		<div class="about-content" style="max-width: 800px; margin: 0 auto;">
+	<main class="landing-main-content">
+		<div class="landing-content-wrapper">
 			
-			<section>
+			<section class="landing-section">
 				<h2>Why Work With Me?</h2>
 				<p class="intro-text">
 					Unlike generic tutoring agencies that rotate graduate students through your schedule, you work directly with me—an experienced educator with over two decades of experience breaking down complex math and science concepts for NYC students. My approach is deeply patient, highly encouraging, and entirely tailored to how you learn.
 				</p>
 			</section>
 
-			<section>
+			<section class="landing-section">
 				<h2>Physics Courses Covered</h2>
 				<ul class="education-list icon-list">
 					<li>
-						<span class="list-item-title">AP Physics (1, 2, & C: Mechanics / E&M)</span>
+						<span class="list-item-title">AP Physics (1, 2, &amp; C: Mechanics / E&amp;M)</span>
 						<span class="list-item-description">Rigorous preparation for exams, conceptual foundations, and advanced problem-solving techniques.</span>
 					</li>
 					<li>
-						<span class="list-item-title">College & University Physics</span>
+						<span class="list-item-title">College &amp; University Physics</span>
 						<span class="list-item-description">Algebra-based and calculus-based university physics support for pre-med and engineering tracks.</span>
 					</li>
 					<li>
@@ -41,17 +41,61 @@ import '../styles/about.css'; // Reusing your about/content text styles for clea
 				</ul>
 			</section>
 
-			<!-- Contact Section matching your site style -->
-			<section id="contact" style="margin-top: 3rem; text-align: center; background: rgba(0,0,0,0.02); padding: 2.5rem; border-radius: 8px;">
+			<!-- Contact / Conversion Section -->
+			<section id="contact" class="landing-contact-box">
 				<h2>Ready to Improve Your Physics Grade?</h2>
-				<p style="margin: 1rem 0 1.5rem 0;">
+				<p class="contact-prompt">
 					If you have any questions or if you'd like to schedule an appointment, you can email me at 
 					<a href={`mailto:${SITE_DATA.email}`}>{SITE_DATA.email}</a>, or text/call at 718-753-7060.
 				</p>
-				<a href={`mailto:${SITE_DATA.email}`} class="landing-btn-primary" style="display: inline-block;">Send an Inquiry</a>
+				<a href={`mailto:${SITE_DATA.email}`} class="landing-btn-primary">Send an Inquiry</a>
 			</section>
 
 		</div>
-	</div>
+	</main>
 
 </LandingLayout>
+
+<style>
+	/* Landing-specific structural styling to override any messy inherited global grid gaps */
+	.landing-main-content {
+		padding: 2rem 1.5rem 4rem 1.5rem;
+	}
+
+	.landing-content-wrapper {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.landing-section {
+		margin-bottom: 3.5rem;
+	}
+
+	.landing-section h2 {
+		margin-bottom: 1rem;
+	}
+
+	.intro-text {
+		line-height: 1.7;
+	}
+
+	.landing-contact-box {
+		margin-top: 3.5rem;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.02);
+		padding: 2.5rem 2rem;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	.contact-prompt {
+		margin: 1rem 0 1.5rem 0;
+		line-height: 1.6;
+	}
+
+	/* Dark mode support fallback for background tint if theme uses dark variables */
+	[data-theme="dark"] .landing-contact-box {
+		background: rgba(255, 255, 255, 0.03);
+		border-color: rgba(255, 255, 255, 0.08);
+	}
+</style>
