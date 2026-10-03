@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import { SITE_DATA } from '../constants';
 
+import ContactForm from '../components/ContactForm.astro';
+
 import '../styles/home.css';
 import '../styles/about.css';
 ---
@@ -10,7 +12,7 @@ import '../styles/about.css';
 <Layout pageTitle="">
 	<Hero 
 		name={SITE_DATA.name} 
-		tagline={SITE_DATA.tagline} 
+		tagline="Physics Tutoring with 20+ Years of Experience" 
 		twitter={SITE_DATA.twitter}
 		linkedin={SITE_DATA.linkedin}
 		scholar={SITE_DATA.scholar}
@@ -28,6 +30,22 @@ import '../styles/about.css';
             </div>
 
             <section>
+                <h2>Proven Experience in NYC’s Top Schools</h2>
+				<p class="intro-text">
+					I’ve been tutoring physics and math in New York City for over two decades. Because I work extensively with students from top local independent and prep schools—including Trinity, Dalton, and Horace Mann—as well as undergraduates and post-bacs at NYU and Columbia, I know the exact pacing, rigor, and expectations of your physics syllabus.
+					<br><br>
+					Whether you are tackling a high school intro course, AP Physics C E&M, or your college-level physics pre-med requirements, I already know the hurdles you are facing because I’ve helped dozens of students clear them.
+				</p>
+			</section>
+
+            <section>
+                <h2>The Approach: Experience, Patience, and Vast Resources</h2>
+				<p class="intro-text">
+					I’ve explained these concepts thousands of times, to thousands of students, in every way imaginable. If an explanation doesn't click the first time, we simply try another angle—patience is a core part of how I work. You won't just get a patient guide; you’ll get access to a massive library of curated practice problems, past exams, and targeted problem sets. Instead of last-minute cramming, we use targeted practice problems and real exam material so you can walk into test day fully prepared..
+				</p>
+			</section>
+
+            <section>
                 <h2>Subjects Covered</h2>
                 <ul class="education-list icon-list">
                     <li>
@@ -41,15 +59,16 @@ import '../styles/about.css';
                 </ul>
             </section>
 
-
             <section>
-                <h2>Proven Experience in NYC’s Top Schools</h2>
+                <h2>Ready to Master Physics and Raise Your Grades?</h2>
 				<p class="intro-text">
-					I’ve been tutoring physics and math in New York City for over two decades. Because I work extensively with students from top local independent and prep schools—including Trinity, Dalton, and Horace Mann—as well as undergraduates and post-bacs at NYU and Columbia, I know the exact pacing, rigor, and expectations of your physics syllabus.
-					<br><br>
-					Whether you are tackling a high school intro course, AP Physics C E&M, or your college-level physics pre-med requirements, I already know the hurdles you are facing because I’ve helped dozens of students clear them.
+					PLACEHOLDER
 				</p>
+				<div class="contact-form-section">
+		            <ContactForm/>
+        		</div>
 			</section>
+
 
         </div>
 	</div>
