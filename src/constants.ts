@@ -27,6 +27,7 @@ export const SITE_DATA = {
 
     // Your email address (use [at] and [dot] to avoid spam bots)
     email: "cjhellwig@gmail.com",
+    phone: "17187537060",
 
     // One-line research tagline used for SEO and social sharing meta tags
     description: "Personalized tutoring designed for your success.",
