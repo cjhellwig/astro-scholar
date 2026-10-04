@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro';
+import Header from '../components/MinimalHeader.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_DATA } from '../constants';
 
@@ -41,7 +41,7 @@ const title = `${SITE_DATA.name}${pageTitle ? ` | ${pageTitle}` : ""}`;
 		</script>
 	</head>
 	<body>
-	    <Header />
+	    <MinimalHeader />
 		<main>
 			<slot />
 		</main>
