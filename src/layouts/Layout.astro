@@ -13,8 +13,8 @@ const title = `${SITE_DATA.name}${pageTitle ? ` | ${pageTitle}` : ""}`;
 <html lang="en">
 	<head>
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-992056004"></script>
-		<script>
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-992056004"></script>
+		<script is:inline>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
@@ -24,7 +24,7 @@ const title = `${SITE_DATA.name}${pageTitle ? ` | ${pageTitle}` : ""}`;
 
 		<!-- Event snippet for Submit lead form conversion page
 		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-		<script>
+		<script is:inline>
 		function gtag_report_conversion(url) {
 		  var callback = function () {
 		    if (typeof(url) != 'undefined') {
