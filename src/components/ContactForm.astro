@@ -11,6 +11,9 @@ const { source = "General Contact Page" } = Astro.props;
   <!-- Paste your Web3Forms Access Key here -->
   <input type="hidden" name="access_key" value="5e5acae5-46d9-4ead-bce8-3aecfc1322f6">
 
+  <!-- Add this line below to redirect users -->
+  <input type="hidden" name="redirect" value="https://nyctutor.net/thanks">
+
   <!-- Email Subject Line -->
   <input type="hidden" name="subject" value={`New Inquiry: ${source}`}>
 
